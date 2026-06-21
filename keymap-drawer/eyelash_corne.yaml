@@ -19,11 +19,11 @@ layers:
   - {t: S, h: SYMBOL}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: G, h: FUNCTION}
+  - {t: G, h: FUNC}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: H, h: FUNCTION}
+  - {t: H, h: FUNC}
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: SYMBOL}
@@ -49,7 +49,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-option$$
   - RGUI
-  COMPATIBLE:
+  COMP:
   - $$mdi:backspace-reverse-outline$$
   - Q
   - W
@@ -96,7 +96,7 @@ layers:
   - EXTEND
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
-  - FUNCTION
+  - VISUAL
   - $$mdi:apple-keyboard-option$$
   SYMBOL:
   - '~'
@@ -112,21 +112,21 @@ layers:
   - (
   - )
   - '|'
-  - {t: '`', h: FUNCTION, s: '~'}
+  - {t: '`', h: VISUAL, s: '~'}
   - {t: '''', h: EXTEND, s: '"'}
   - {t: '"', h: SYMBOL, type: held}
   - {t: _, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: +, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: G, h: VISUAL}
+  - {t: '-', h: '$$mdi:apple-keyboard-shift$$', s: _}
+  - {t: +, h: FUNC}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '=', h: VISUAL, s: +}
+  - {t: '=', h: FUNC, s: +}
   - {t: '[', h: '$$mdi:apple-keyboard-shift$$', s: '{'}
   - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
   - {t: '{', h: SYMBOL, type: held alternate}
   - {t: '}', h: EXTEND}
-  - {t: \, h: FUNCTION, s: '|'}
+  - {t: \, h: VISUAL, s: '|'}
   - F12
   - F1
   - F2
@@ -164,8 +164,8 @@ layers:
   - $$mdi:keyboard-esc$$
   - {t: '0', s: ), type: held}
   - {t: '6', s: ^, type: held alternate}
-  - {t: '7', h: '$$mdi:apple-keyboard-control$$', s: '&'}
-  - {t: '8', h: '$$mdi:apple-keyboard-shift$$', s: '*'}
+  - {t: '5', h: '$$mdi:apple-keyboard-control$$', s: '%'}
+  - {t: '4', h: '$$mdi:apple-keyboard-shift$$', s: $}
   - KP DOT
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -199,10 +199,10 @@ layers:
   VISUAL:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:volume-off$$
   - $$mdi:volume-high$$
   - $$mdi:volume-low$$
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-left$$
@@ -211,19 +211,19 @@ layers:
   - $$mdi:pan-up$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-esc$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - LGUI
   - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: MENU, type: held alternate}
+  - APP
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$', type: held alternate}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGUI
   - {t: '$$mdi:keyboard-return$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -239,13 +239,13 @@ layers:
   - '&mkp MB5'
   - $$mdi:pan-down$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - LGUI
+  - {t: DEFAULT, h: toggle}
   - '&mkp MB3'
   - '&mkp MB1'
   - '&mkp MB2'
-  - $$mdi:apple-keyboard-option$$
-  - RGUI
-  FUNCTION:
+  - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
+  - {t: DEFAULT, h: toggle}
+  FUNC:
   - {t: SYSTEM, h: toggle}
   - F13
   - F14
@@ -259,7 +259,7 @@ layers:
   - F3
   - F4
   - {t: SYSTEM, h: toggle}
-  - {t: FUNCTION, h: toggle, type: held alternate}
+  - {t: VISUAL, h: toggle}
   - F17
   - {t: F18, type: held alternate}
   - F19
@@ -273,8 +273,8 @@ layers:
   - F6
   - {t: F7, type: held alternate}
   - F8
-  - {t: FUNCTION, h: toggle, type: held alternate}
-  - {t: COMPATIBLE, h: toggle}
+  - {t: VISUAL, h: toggle}
+  - {t: COMP, h: toggle}
   - F21
   - F22
   - F23
@@ -287,20 +287,20 @@ layers:
   - F10
   - F11
   - F12
-  - {t: COMPATIBLE, h: toggle}
+  - {t: COMP, h: toggle}
   - {t: DEFAULT, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: DEFAULT, h: toggle}
   MISC:
   - KP NLCK
   - SYSREQ
-  - $$mdi:printer-outline$$
-  - PAUSE BREAK
-  - MENU
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:printer-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - KP DIVIDE
   - KP 9
@@ -313,7 +313,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PAUSE BREAK
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -325,10 +325,10 @@ layers:
   - KP RPAR
   - SLCK
   - INS
-  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - APP
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - KP MULTIPLY
@@ -344,20 +344,20 @@ layers:
   - KP DOT
   - {t: DEFAULT, h: toggle}
   SYSTEM:
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - '&studio_unlock'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB SPD
-  - RGB SPI
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - $$mdi:progress-download$$
-  - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
@@ -371,7 +371,7 @@ layers:
   - RGB BRI
   - RGB EFF
   - RGB TOG
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
   - {t: BT DISC, h: '0'}
   - {t: BT DISC, h: '1'}
@@ -380,7 +380,7 @@ layers:
   - {t: BT DISC, h: '4'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB SPD
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -394,7 +394,7 @@ layers:
   - {t: DEFAULT, h: toggle}
 combos:
 - p: [44, 45]
-  k: Ctl+$$mdi:keyboard-space$$
+  k: Gui+$$mdi:keyboard-space$$
   l: [DEFAULT]
 - p: [43, 46]
   k: $$mdi:alpha-w-box$$
