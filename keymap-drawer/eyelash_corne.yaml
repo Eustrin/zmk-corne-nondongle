@@ -344,19 +344,19 @@ layers:
   - KP DOT
   - {t: DEFAULT, h: toggle}
   SYSTEM:
-  - $$mdi:progress-download$$
-  - BT CLR ALL
-  - $$mdi:bluetooth-off$$
-  - OUT BLE
-  - OUT USB
-  - OUT NONE
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&studio_unlock'
-  - EP OFF
-  - EP ON
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB SPI
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
