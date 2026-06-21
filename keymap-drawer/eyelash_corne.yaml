@@ -347,13 +347,13 @@ layers:
   - $$mdi:progress-download$$
   - BT CLR ALL
   - $$mdi:bluetooth-off$$
-  - OUT BLE
-  - OUT USB
-  - OUT NONE
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&studio_unlock'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - EP OFF
+  - EP ON
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB SPI
   - $$mdi:progress-download$$
