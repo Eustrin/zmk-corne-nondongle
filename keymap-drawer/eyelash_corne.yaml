@@ -297,10 +297,10 @@ layers:
   MISC:
   - KP NLCK
   - SYSREQ
-  - $$mdi:printer-outline$$
-  - PAUSE BREAK
-  - MENU
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:printer-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - KP DIVIDE
   - KP 9
@@ -313,7 +313,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PAUSE BREAK
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -325,10 +325,10 @@ layers:
   - KP RPAR
   - SLCK
   - INS
-  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - APP
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - KP MULTIPLY
@@ -345,19 +345,19 @@ layers:
   - {t: DEFAULT, h: toggle}
   SYSTEM:
   - $$mdi:progress-download$$
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - '&studio_unlock'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB SPD
-  - RGB SPI
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - $$mdi:progress-download$$
   - BT CLR ALL
+  - $$mdi:bluetooth-off$$
+  - OUT BLE
+  - OUT USB
+  - OUT NONE
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&studio_unlock'
+  - EP OFF
+  - EP ON
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB SPI
+  - $$mdi:progress-download$$
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
@@ -371,7 +371,7 @@ layers:
   - RGB BRI
   - RGB EFF
   - RGB TOG
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
   - {t: BT DISC, h: '0'}
   - {t: BT DISC, h: '1'}
@@ -380,7 +380,7 @@ layers:
   - {t: BT DISC, h: '4'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB SPD
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
