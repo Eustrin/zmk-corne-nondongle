@@ -347,7 +347,7 @@ layers:
   - $$mdi:progress-download$$
   - BT CLR ALL
   - $$mdi:bluetooth-off$$
-  - OUT BLE
+  - OUT BL
   - OUT USB
   - OUT NONE
   - {t: '$$mdi:transfer$$', type: trans}
