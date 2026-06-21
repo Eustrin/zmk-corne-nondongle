@@ -277,9 +277,8 @@
             display-name = "SYSTEM";
             bindings = <
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
-/* &bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &out OUT_BLE   &out OUT_USB   &out OUT_NONE                  &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader */
-&bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &none          &none          &none                          &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader
-/* &none      &none      &none      &none      &none      &none                         &trans             &none      &none      &none      &none      &none      &none */
+&bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &out OUT_BLE   &out OUT_USB   &out OUT_NONE                  &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader
+/* &bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &none          &none          &none                          &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader */
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
 &sys_reset   &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4           &trans  &trans  &trans     &rgb_ug RGB_EFR  &rgb_ug RGB_BRD    &rgb_ug RGB_BRI   &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &sys_reset
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
