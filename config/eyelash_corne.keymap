@@ -39,7 +39,11 @@
     trigger-period-ms = <16>;
 };
 
-&soft_off { hold-time-ms = <2000>; };
+// &soft_off { hold-time-ms = <2000>; };
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BSPC DEL>; // INS
+};
 
 / {
     behaviors {
@@ -61,7 +65,6 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
         tap-ms = <100>;
     };
 
