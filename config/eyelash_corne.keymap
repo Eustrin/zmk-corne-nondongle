@@ -1,3 +1,5 @@
+// -*- mode: devicetree-ts; -*-
+
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
 
@@ -16,21 +18,26 @@
 
 #define DF   0 // DEFAULT
 #define COMP 1 // COMPATIBLE
-#define TP   2 // TOP & SYMBOL
+#define TP   2 // SYMBOL & TOP
 #define EX   3 // EXTEND
 #define VI   4 // VISUAL
 #define FN   5 // FUNCTION
-#define MISC 6 // MISCELLANEOUS
+#define MISC 6 // MISC & MISCELLANEOUS
 #define SYS  7 // SYSTEM
+
+#define LHYPR F13
+#define RHYPR F14
+#define LULT F15
+#define RULT F16
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
+    acceleration-exponent = <1>;  // 0
+    time-to-max-speed-ms = <100>; // 300
+    delay-ms = <0>;               // 0
 };
 
 &mmv {
@@ -84,6 +91,7 @@
         };
     };
 
+// LAYOUT:
 // +---+---+---+---+---+---+           +---+       +---+---+---+---+---+---+
 // |0   1   2   3   4   5  |           |6  |       |7   8   9   10  11  12 |
 // +---+---+---+---+---+---+       +---+---+---+   +---+---+---+---+---+---+
@@ -100,7 +108,8 @@
         combo_lang {
             layers = <0>; timeout-ms = <50>;
             key-positions = <44 45>;
-            bindings = <&kp LG(SPACE)>;
+            // bindings = <&kp LG(SPACE)>;
+            bindings = <&kp PAUSE_BREAK>;
         };
         combo_capsword {
             layers = <0>; timeout-ms = <50>;
@@ -110,22 +119,22 @@
 
         combo_0 {
             layers = <0>; timeout-ms = <50>;
-            key-positions = <14 26>;
-            bindings = <&kp N0>;
+            key-positions = <1 11>;
+            bindings = <&kp N9>;
         };
         combo_1 {
             layers = <0>; timeout-ms = <50>;
-            key-positions = <32 37>;
+            key-positions = <14 26>;
             bindings = <&kp N1>;
         };
         combo_2 {
             layers = <0>; timeout-ms = <50>;
-            key-positions = <31 38>;
+            key-positions = <15 25>;
             bindings = <&kp N2>;
         };
         combo_3 {
             layers = <0>; timeout-ms = <50>;
-            key-positions = <30 39>;
+            key-positions = <16 24>;
             bindings = <&kp N3>;
         };
         combo_4 {
@@ -135,12 +144,12 @@
         };
         combo_5 {
             layers = <0>; timeout-ms = <50>;
-            key-positions = <16 24>;
+            key-positions = <18 22>;
             bindings = <&kp N5>;
         };
         combo_6 {
             layers = <0>; timeout-ms = <50>;
-            key-positions = <15 25>;
+            key-positions = <5 7>;
             bindings = <&kp N6>;
         };
         combo_7 {
@@ -164,39 +173,39 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default_layer { // DF
             display-name = "DEFAULT"; // mt: Mod Tap
             bindings = <
-//---------+----------+----------+----------  +----------  +----------|  |-------|-------|-------|-------|  |----------+----------  +----------  +----------+----------  +----------|
-&kp DEL    &kp Q      &kp W      &kp E        &kp R        &kp T                         &trans             &kp Y      &kp U        &kp I        &kp O      &kp P        &kp BSPC
-//---------+----------+----------+----------  +----------  +----------|  |-------|-------|-------|-------|  |----------+----------  +----------  +----------+----------  +----------|
-&lt VI ESC  &lt EX A  &lt TP S   &mt LCTRL D  &mt LSHFT F  &lt FN G              &trans  &trans  &trans     &lt FN H   &mt RSHFT J  &mt RCTRL K  &lt TP L   &lt EX SEMI  &lt VI RET
-//---------+----------+----------+----------  +----------  +----------|  |-------|-------|-------|-------|  |----------+----------  +----------  +----------+----------  +----------|
-&kp INS    &kp Z      &kp X      &kp C        &kp V        &kp B         &trans          &trans             &kp N      &kp M        &kp COMMA    &kp DOT    &kp FSLH     &kp PAUSE_BREAK
-//---------+----------+----------+----------  +----------  +----------|  |-------|-------|-------|-------|  |----------+----------  +----------  +----------+----------  +----------|
-                                 &kp LGUI     &kp LALT     &kp TAB                                          &kp SPACE  &kp RALT     &kp RGUI
-//---------+----------+----------+----------  +----------  +----------|  |-------|-------|-------|-------|  |----------+----------  +----------  +----------+----------  +----------|
+//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+&kp DEL    &kp Q      &kp W      &kp E        &kp R         &kp T                         &trans             &kp Y           &kp U         &kp I        &kp O      &kp P        &kp BSPC
+//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+&lt VI ESC  &lt EX A  &lt TP S   &mt LCTRL D  &mt LSHFT F   &lt FN G              &trans  &trans  &trans     &lt FN H        &mt RSHFT J   &mt RCTRL K  &lt TP L   &lt EX SEMI  &lt VI RET
+//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+&kp LULT   &kp Z      &kp X      &kp C        &kp V         &kp B         &trans          &trans             &kp N           &kp M         &kp COMMA    &kp DOT    &kp FSLH     &kp RULT
+//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+                                 &kp LHYPR    &mt LGUI INS  &mt LALT TAB                                     &mt RALT SPACE  &mt RGUI INS  &kp RHYPR
+//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        comp_layer {
+        comp_layer { // COMP
             display-name = "COMP";
             bindings = <
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
-&kp DEL    &kp Q      &kp W      &kp E      &kp R      &kp T                         &trans             &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
+&kp LALT   &kp Q      &kp W      &kp E      &kp R      &kp T                         &trans             &kp Y      &kp U      &kp I      &kp O      &kp P      &kp RALT
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
 &kp LCTRL  &kp A      &kp S      &kp D      &kp F      &kp G                 &trans  &trans  &trans     &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp RCTRL
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
 &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B         &trans          &trans             &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
-                                 &kp LGUI   &mo EX     &kp TAB                                          &kp SPACE  &mo VI     &kp LALT
+                                 &kp LGUI   &mo TP     &kp TAB                                          &kp SPACE  &mo TP     &mo EX
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        symbol_layer {
+        symbol_layer { // TP
             display-name = "SYMBOL";
             bindings = <
 //---------   +---------- +---------- +----------      +----------      +----------|  |-------|-------|-------|-------|  |----------   +----------     +----------     +----------  +----------  +----------|
@@ -212,7 +221,7 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        extend_layer {
+        extend_layer { // EX
             display-name = "EXTEND";
             bindings = <
 //---------+----------   +----------+----------   +----------   +----------|     |-------|-------|-------|-------|  |----------+----------      +----------   +----------+----------  +----------|
@@ -228,31 +237,31 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        visual_layer {
+        visual_layer { // VI
             display-name = "VISUAL";
             bindings = < // mmv: Mouse Move; mkp: Mouse Key Press; msc: Mouse Scroll
-//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------+----------     +----------     +----------      +----------     +----------|
-&kp DEL    &none      &kp C_MUTE     &kp C_VOL_UP  &kp C_VOL_DN  &none                          &trans             &none      &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &kp BSPC
-//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------+----------     +----------     +----------      +----------     +----------|
-&kp ESC    &kp LGUI   &kp LALT       &kp LCTRL     &kp LSHFT     &none                  &trans  &trans  &trans     &kp K_APP  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RGUI        &kp RET
-//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------+----------     +----------     +----------      +----------     +----------|
-&none      &none      &kp C_BRI_MAX  &kp C_BRI_UP  &kp C_BRI_DN  &kp C_BRI_MIN  &trans          &trans             &none      &mkp MB4        &none           &mkp MB5         &msc SCRL_DOWN  &none
-//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------+----------     +----------     +----------      +----------     +----------|
-                                     &to DF        &mkp MB3      &mkp MB1                                                     &mkp MB2        &kp LALT        &to DF
-//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------+----------     +----------     +----------      +----------     +----------|
+//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
+&kp DEL    &none      &kp C_MUTE     &kp C_VOL_UP  &kp C_VOL_DN  &none                          &trans             &none           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &kp BSPC
+//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
+&kp ESC    &kp LGUI   &kp LALT       &kp LCTRL     &kp LSHFT     &kp LGUI               &trans  &trans  &trans     &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &kp RET
+//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
+&none      &none      &kp C_BRI_MAX  &kp C_BRI_UP  &kp C_BRI_DN  &kp C_BRI_MIN  &trans          &trans             &msc SCRL_DOWN  &mkp MB4        &none           &mkp MB5         &none           &none
+//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
+                                     &to DF        &mkp MB3      &mkp MB1                                                          &mkp MB2        &kp K_APP       &to DF
+//---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        func_layer {
+        func_layer { // FN
             display-name = "FUNC";
             bindings = <
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
-&to SYS    &kp F13    &kp F14    &kp F15    &kp F16    &to MISC                      &trans             &to MISC   &kp F1     &kp F2     &kp F3     &kp F4     &to SYS
+&to SYS    &kp F13    &kp F14    &kp F15    &kp F16    &to MISC                      &trans             &to MISC   &kp F1     &kp F2     &kp F3     &bt BT_PRE &to SYS
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
 &to VI     &kp F17    &kp F18    &kp F19    &kp F20    &none                 &trans  &trans  &trans     &none      &kp F5     &kp F6     &kp F7     &kp F8     &to VI
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
-&to COMP   &kp F21    &kp F22    &kp F23    &kp F24    &none         &trans          &trans             &none      &kp F9     &kp F10    &kp F11    &kp F12    &to COMP
+&to COMP   &kp F21    &kp F22    &kp F23    &kp F24    &none         &trans          &trans             &bt BT_NXT &kp F9     &kp F10    &kp F11    &kp F12    &to COMP
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
                                  &to DF     &none      &none                                            &none      &none      &to DF
 //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
@@ -260,7 +269,7 @@
             sensor-bindings = <&rsr_vol &rsr_trans>; // SYSREQ
         };
 
-        misc_layer {
+        misc_layer { // MISC
             display-name = "MISC";
             bindings = <
 //----------  +---------- +----------+----------+----------+----------|     |-------|-------|-------|-------|  |----------      +---------- +----------   +----------+----------   +----------|
@@ -273,12 +282,12 @@
                                      &to DF     &none      &none                                               &kp KP_N0        &kp KP_DOT  &to DF
 //----------  +---------- +----------+----------+----------+----------|     |-------|-------|-------|-------|  |----------      +---------- +----------   +----------+----------   +----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&rsr_vol &rsr_trans>; // &kp SYSREQ
         };
 
-        system_layer { // rgb_ug: RGB Underglow; EFF: Effect forward; EFR: Effect reverse; EP: External Power
+        system_layer { // SYS
             display-name = "SYSTEM";
-            bindings = <
+            bindings = < // rgb_ug: RGB Underglow; EFF: Effect forward; EFR: Effect reverse; EP: External Power
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
 /* &bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &out OUT_BL    &out OUT_USB   &out OUT_NONE                  &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader */
 &bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &none          &none          &none                          &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader
