@@ -29,7 +29,7 @@ layers:
   - {t: L, h: SYMBOL}
   - {t: ;, h: EXTEND, s: ':'}
   - {t: '$$mdi:keyboard-return$$', h: VISUAL}
-  - INS
+  - F15
   - Z
   - X
   - C
@@ -42,15 +42,15 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - PAUSE BREAK
-  - LGUI
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:keyboard-tab$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:apple-keyboard-option$$
-  - RGUI
+  - F16
+  - F13
+  - {t: INS, h: LGUI}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: INS, h: RGUI}
+  - F14
   COMP:
-  - $$mdi:backspace-reverse-outline$$
+  - $$mdi:apple-keyboard-option$$
   - Q
   - W
   - E
@@ -62,7 +62,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - A
   - S
@@ -93,11 +93,11 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - LGUI
-  - EXTEND
+  - SYMBOL
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
-  - VISUAL
-  - $$mdi:apple-keyboard-option$$
+  - SYMBOL
+  - EXTEND
   SYMBOL:
   - '~'
   - '!'
@@ -142,10 +142,10 @@ layers:
   - F10
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   EXTEND:
   - $$mdi:backspace-reverse-outline$$
@@ -194,8 +194,8 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {type: held alternate}
   VISUAL:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -215,15 +215,15 @@ layers:
   - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
+  - LGUI
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - APP
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$', type: held alternate}
-  - RGUI
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -233,17 +233,17 @@ layers:
   - BRI MIN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:pan-down$$
   - '&mkp MB4'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&mkp MB5'
-  - $$mdi:pan-down$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: DEFAULT, h: toggle}
-  - '&mkp MB3'
+  - {t: '&mkp MB3', type: held alternate}
   - '&mkp MB1'
   - '&mkp MB2'
-  - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
+  - {t: APP, type: held alternate}
   - {t: DEFAULT, h: toggle}
   FUNC:
   - {t: SYSTEM, h: toggle}
@@ -257,7 +257,7 @@ layers:
   - F1
   - F2
   - F3
-  - F4
+  - BT PRE
   - {t: SYSTEM, h: toggle}
   - {t: VISUAL, h: toggle}
   - F17
@@ -282,17 +282,17 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - F9
   - F10
   - F11
   - F12
   - {t: COMP, h: toggle}
   - {t: DEFAULT, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: DEFAULT, h: toggle}
   MISC:
   - KP NLCK
@@ -394,30 +394,30 @@ layers:
   - {t: DEFAULT, h: toggle}
 combos:
 - p: [44, 45]
-  k: Gui+$$mdi:keyboard-space$$
+  k: PAUSE BREAK
   l: [DEFAULT]
 - p: [43, 46]
   k: $$mdi:alpha-w-box$$
   l: [DEFAULT]
-- p: [14, 26]
-  k: {t: '0', s: )}
+- p: [1, 11]
+  k: {t: '9', s: (}
   l: [DEFAULT]
-- p: [32, 37]
+- p: [14, 26]
   k: {t: '1', s: '!'}
   l: [DEFAULT]
-- p: [31, 38]
+- p: [15, 25]
   k: {t: '2', s: '@'}
   l: [DEFAULT]
-- p: [30, 39]
+- p: [16, 24]
   k: {t: '3', s: '#'}
   l: [DEFAULT]
 - p: [17, 23]
   k: {t: '4', s: $}
   l: [DEFAULT]
-- p: [16, 24]
+- p: [18, 22]
   k: {t: '5', s: '%'}
   l: [DEFAULT]
-- p: [15, 25]
+- p: [5, 7]
   k: {t: '6', s: ^}
   l: [DEFAULT]
 - p: [4, 8]
