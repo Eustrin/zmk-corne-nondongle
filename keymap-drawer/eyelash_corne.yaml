@@ -257,7 +257,7 @@ layers:
   - F1
   - F2
   - F3
-  - BT PRE
+  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - {t: SYSTEM, h: toggle}
   - {t: VISUAL, h: toggle}
   - F17
