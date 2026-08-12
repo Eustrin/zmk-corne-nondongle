@@ -347,9 +347,9 @@ layers:
   - $$mdi:progress-download$$
   - BT CLR ALL
   - $$mdi:bluetooth-off$$
-  - OUT BL
-  - OUT USB
-  - OUT NONE
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&studio_unlock'
   - EP OFF
