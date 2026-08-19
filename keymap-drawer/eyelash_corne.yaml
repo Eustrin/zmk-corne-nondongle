@@ -29,7 +29,7 @@ layers:
   - {t: L, h: SYMBOL}
   - {t: ;, h: EXTEND, s: ':'}
   - {t: '$$mdi:keyboard-return$$', h: VISUAL}
-  - F15
+  - F23
   - Z
   - X
   - C
@@ -42,13 +42,13 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - F16
-  - F13
+  - F24
+  - F21
   - {t: INS, h: LGUI}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: INS, h: RGUI}
-  - F14
+  - F22
   COMP:
   - $$mdi:apple-keyboard-option$$
   - Q
@@ -127,7 +127,7 @@ layers:
   - {t: '{', h: SYMBOL, type: held alternate}
   - {t: '}', h: EXTEND}
   - {t: \, h: VISUAL, s: '|'}
-  - F12
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -140,7 +140,7 @@ layers:
   - F8
   - F9
   - F10
-  - F11
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -176,7 +176,7 @@ layers:
   - {t: '$$mdi:arrow-right-bold$$', type: held alternate}
   - {t: '&key_repeat', type: held alternate}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - KP PLUS
   - {t: '3', s: '#'}
   - {t: '2', s: '@'}
@@ -189,7 +189,7 @@ layers:
   - HOME
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -247,46 +247,46 @@ layers:
   - {t: DEFAULT, h: toggle}
   FUNC:
   - {t: SYSTEM, h: toggle}
+  - F11
+  - F12
   - F13
   - F14
   - F15
-  - F16
-  - {t: MISC, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: MISC, h: toggle}
-  - F1
-  - F2
-  - F3
-  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - {t: SYSTEM, h: toggle}
-  - {t: VISUAL, h: toggle}
+  - F16
   - F17
-  - {t: F18, type: held alternate}
+  - F18
   - F19
   - F20
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: SYSTEM, h: toggle}
+  - {t: VISUAL, h: toggle}
+  - F1
+  - {t: F2, type: held alternate}
+  - F3
+  - F4
+  - {t: F5, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
-  - F5
-  - F6
-  - {t: F7, type: held alternate}
+  - {t: F6, type: held alternate}
+  - F7
   - F8
+  - {t: F9, type: held alternate}
+  - F10
   - {t: VISUAL, h: toggle}
   - {t: COMP, h: toggle}
-  - F21
-  - F22
-  - F23
-  - F24
+  - {t: MISC, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - F9
-  - F10
-  - F11
-  - F12
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - {t: MISC, h: toggle}
   - {t: COMP, h: toggle}
   - {t: DEFAULT, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
@@ -400,7 +400,7 @@ combos:
   k: $$mdi:alpha-w-box$$
   l: [DEFAULT]
 - p: [1, 11]
-  k: {t: '9', s: (}
+  k: {t: '0', s: )}
   l: [DEFAULT]
 - p: [14, 26]
   k: {t: '1', s: '!'}
