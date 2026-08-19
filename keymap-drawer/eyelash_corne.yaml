@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - PSCRN PAUSE BREAK
+  - {t: PAUSE BREAK, h: '$$mdi:printer-outline$$'}
   - APP
   - {t: INS, h: LGUI}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
