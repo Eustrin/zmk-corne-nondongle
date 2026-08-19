@@ -13,7 +13,7 @@
 
 #include <dt-bindings/zmk/rgb.h> // rgb_ug
 #include <input/processors.dtsi>
-#include <behaviors/runtime-sensor-rotate.dtsi>
+/* #include <behaviors/runtime-sensor-rotate.dtsi> */
 #include <dt-bindings/zmk/ext_power.h> // &ext_power
 
 #define DF   0 // DEFAULT
@@ -54,21 +54,11 @@
 };
 
 / {
-    behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-    };
-
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
-
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -77,19 +67,6 @@
     };
 
     behaviors {
-        rsr_vol: rsr_vol {
-            compatible = "zmk,behavior-runtime-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            tap-ms = <5>;
-            cw-binding = <&kp C_VOL_UP>;
-            ccw-binding = <&kp C_VOL_DN>;
-        };
-
-        rsr_trans: rsr_trans {
-            compatible = "zmk,behavior-runtime-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            tap-ms = <0>;
-        };
     };
 
 // LAYOUT:
@@ -187,7 +164,6 @@
                                      &kp LHYPR    &mt LGUI INS  &mt LALT TAB                                     &mt RALT SPACE  &mt RGUI INS  &kp RHYPR
 //---------    +----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
         comp_layer {
@@ -203,7 +179,6 @@
                                      &kp LGUI   &mo EX     &kp TAB                                          &kp SPACE  &mo TP     &kp RGUI
 //---------    +----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
         tp_layer {
@@ -219,7 +194,6 @@
                           &trans      &trans           &trans                                                            &trans        &trans          &trans
 //---------   +---------- +---------- +----------      +----------      +----------|  |-------|-------|-------|-------|  |----------   +----------     +----------     +----------  +----------  +----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
         ex_layer {
@@ -235,7 +209,6 @@
                                     &trans        &trans        &trans                                                         &trans           &trans        &trans
 //---------+----------   +----------+----------   +----------   +----------|     |-------|-------|-------|-------|  |----------+----------      +----------   +----------+----------  +----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
         vi_layer {
@@ -251,7 +224,6 @@
                                      &to DF        &mkp MB3      &mkp MB1                                                          &mkp MB2        &mkp MB4        &mkp MB5
 //---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
         fn_layer {
@@ -267,7 +239,6 @@
                                         &to DF        &none         &none                                            &none      &none      &to DF
 //---------+----------    +----------   +----------   +----------   +----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>; // SYSREQ
         };
 
         misc_layer {
@@ -283,7 +254,6 @@
                                      &to DF     &none      &none                                               &kp KP_N0        &kp KP_DOT  &to DF
 //----------  +---------- +----------+----------+----------+----------|     |-------|-------|-------|-------|  |----------      +---------- +----------   +----------+----------   +----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>; // &kp SYSREQ
         };
 
         sys_layer {
@@ -300,7 +270,6 @@
                                             &to DF         &none          &none                                             &none            &none              &to DF
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
             >;
-            sensor-bindings = <&rsr_vol &rsr_trans>; // RGB_ON RGB_OFF BT_NXT BT_PRE OUT_TOG; ext_power EP_TOG
         };
 
 /*         xxxxxx_layer { */
@@ -316,7 +285,6 @@
 /*                                  &trans     &trans     &trans                                                      &trans     &trans     &trans */
 /* //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------| */
 /*             >; */
-/*             sensor-bindings = <&rsr_vol &rsr_trans>; */
 /*         }; */
 
     };
