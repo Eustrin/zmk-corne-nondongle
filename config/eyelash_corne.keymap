@@ -25,10 +25,11 @@
 #define MISC 6 // MISC & MISCELLANEOUS
 #define SYS  7 // SYSTEM
 
-#define LHYPR F21
-#define RHYPR F22
-#define LULT F23
-#define RULT F24
+#define LANG PAUSE_BREAK
+#define LHYPR K_APP
+#define RHYPR K_APP
+#define LULT PSCRN
+#define RULT PSCRN
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -105,17 +106,17 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_lang {
-            layers = <0>; timeout-ms = <50>;
-            key-positions = <44 45>;
-            // bindings = <&kp LG(SPACE)>;
-            bindings = <&kp PAUSE_BREAK>;
-        };
         combo_capsword {
             layers = <0>; timeout-ms = <50>;
             key-positions = <43 46>;
             bindings = <&caps_word>;
         };
+        /* combo_lang { */
+        /*     layers = <0>; timeout-ms = <50>; */
+        /*     key-positions = <44 45>; */
+        /*     // bindings = <&kp LG(SPACE)>; */
+        /*     bindings = <&kp PAUSE_BREAK>; */
+        /* }; */
 
         combo_0 {
             layers = <0>; timeout-ms = <50>;
@@ -176,15 +177,15 @@
         df_layer {
             display-name = "DEFAULT"; // mt: Mod Tap
             bindings = <
-//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
-&kp DEL    &kp Q      &kp W      &kp E        &kp R         &kp T                         &trans             &kp Y           &kp U         &kp I        &kp O      &kp P        &kp BSPC
-//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
-&lt VI ESC  &lt EX A  &lt TP S   &mt LCTRL D  &mt LSHFT F   &lt FN G              &trans  &trans  &trans     &lt FN H        &mt RSHFT J   &mt RCTRL K  &lt TP L   &lt EX SEMI  &lt VI RET
-//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
-&kp LULT   &kp Z      &kp X      &kp C        &kp V         &kp B         &trans          &trans             &kp N           &kp M         &kp COMMA    &kp DOT    &kp FSLH     &kp RULT
-//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
-                                 &kp LHYPR    &mt LGUI INS  &mt LALT TAB                                     &mt RALT SPACE  &mt RGUI INS  &kp RHYPR
-//---------+----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+//---------    +----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+&kp DEL        &kp Q      &kp W      &kp E        &kp R         &kp T                         &trans             &kp Y           &kp U         &kp I        &kp O      &kp P        &kp BSPC
+//---------    +----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+&lt VI ESC     &lt EX A   &lt TP S   &mt LCTRL D  &mt LSHFT F   &lt FN G              &trans  &trans  &trans     &lt FN H        &mt RSHFT J   &mt RCTRL K  &lt TP L   &lt EX SEMI  &lt VI RET
+//---------    +----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+&mt LULT LANG  &kp Z      &kp X      &kp C        &kp V         &kp B         &trans          &trans             &kp N           &kp M         &kp COMMA    &kp DOT    &kp FSLH     &kp RULT LANG
+//---------    +----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
+                                     &kp LHYPR    &mt LGUI INS  &mt LALT TAB                                     &mt RALT SPACE  &mt RGUI INS  &kp RHYPR
+//---------    +----------+----------+----------  +----------   +----------|  |-------|-------|-------|-------|  |----------     +----------   +----------  +----------+----------  +----------|
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
