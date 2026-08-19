@@ -1,5 +1,4 @@
 // -*- mode: devicetree-ts; -*-
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
 
@@ -30,6 +29,17 @@
 #define RHYPR K_APP
 #define LULT PSCRN
 #define RULT PSCRN
+
+// LAYOUT:
+// +---+---+---+---+---+---+           +---+       +---+---+---+---+---+---+
+// |0   1   2   3   4   5  |           |6  |       |7   8   9   10  11  12 |
+// +---+---+---+---+---+---+       +---+---+---+   +---+---+---+---+---+---+
+// |13  14  15  16  17  18 |       |19  20  21 |   |22  23  24  25  26  27 |
+// +---+---+---+---+---+---+   +---+---+---+---+   +---+---+---+---+---+---+
+// |28  29  30  31  32  33 |   |34 |   |35 |       |36  37  38  39  40  41 |
+// +---+---+---+---+---+---+   +---+   +---+       +---+---+---+---+---+---+
+//             |42  43  44 |                       |45  46  47 |
+//             +---+---+---+                       +---+---+---+
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -74,7 +84,7 @@
             tapping-term-ms = <200>;
             hold-trigger-on-release; // Could triggle in one hand past time
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>; // Right keys
             hold-while-undecided; // Immediately hold for mouse
         };
         hmr: home_row_mod_right {
@@ -84,21 +94,31 @@
             tapping-term-ms = <200>;
             hold-trigger-on-release; // Could triggle in one hand past time
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>; // Left keys
+            hold-while-undecided;
+        };
+
+        ltl: layer_tap_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            hold-trigger-on-release;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>;
+            hold-while-undecided;
+        };
+        ltr: layer_tap_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            hold-trigger-on-release;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>;
             hold-while-undecided;
         };
     };
-
-// LAYOUT:
-// +---+---+---+---+---+---+           +---+       +---+---+---+---+---+---+
-// |0   1   2   3   4   5  |           |6  |       |7   8   9   10  11  12 |
-// +---+---+---+---+---+---+       +---+---+---+   +---+---+---+---+---+---+
-// |13  14  15  16  17  18 |       |19  20  21 |   |22  23  24  25  26  27 |
-// +---+---+---+---+---+---+   +---+---+---+---+   +---+---+---+---+---+---+
-// |28  29  30  31  32  33 |   |34 |   |35 |       |36  37  38  39  40  41 |
-// +---+---+---+---+---+---+   +---+   +---+       +---+---+---+---+---+---+
-//             |42  43  44 |                       |45  46  47 |
-//             +---+---+---+                       +---+---+---+
 
     combos {
         compatible = "zmk,combos";
@@ -177,7 +197,7 @@
 //---------     +----------+----------+----------   +----------    +----------|  |-------|-------|-------|-------|  |----------      +----------    +----------   +----------+----------  +----------|
 &kp DEL         &kp Q      &kp W      &kp E         &kp R          &kp T                         &trans             &kp Y            &kp U          &kp I         &kp O      &kp P        &kp BSPC
 //---------     +----------+----------+----------   +----------    +----------|  |-------|-------|-------|-------|  |----------      +----------    +----------   +----------+----------  +----------|
-&lt VI ESC      &lt EX A   &lt TP S   &hml LCTRL D  &hml LSHFT F   &lt FN G              &trans  &trans  &trans     &lt FN H         &hmr RSHFT J   &hmr RCTRL K  &lt TP L   &lt EX SEMI  &lt VI RET
+&ltl VI ESC      &ltl EX A   &ltl TP S   &hml LCTRL D  &hml LSHFT F   &ltl FN G              &trans  &trans  &trans     &ltr FN H         &hmr RSHFT J   &hmr RCTRL K  &ltr TP L   &ltr EX SEMI  &ltr VI RET
 //---------     +----------+----------+----------   +----------    +----------|  |-------|-------|-------|-------|  |----------      +----------    +----------   +----------+----------  +----------|
 &hml LULT LANG  &kp Z      &kp X      &kp C         &kp V          &kp B         &trans          &trans             &kp N            &kp M          &kp COMMA     &kp DOT    &kp FSLH     &hmr RULT LANG
 //---------     +----------+----------+----------   +----------    +----------|  |-------|-------|-------|-------|  |----------      +----------    +----------   +----------+----------  +----------|
@@ -207,7 +227,7 @@
 //---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
 &kp TILDE     &kp EXCL    &kp AT      &kp HASH          &kp DLLR         &kp PRCNT                     &trans             &kp CARET      &kp AMPS         &kp ASTRK        &kp LPAR     &kp RPAR     &kp PIPE
 //---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
-&lt VI GRAVE  &lt EX SQT  &lt TP DQT  &hml LCTRL UNDER  &hml LSHFT MINUS  &lt FN PLUS           &trans  &trans  &trans     &lt FN EQUAL  &hmr RSHFT LBKT  &hmr RCTRL RBKT  &lt TP LBRC  &lt EX RBRC  &lt VI BSLH
+&ltl VI GRAVE  &ltl EX SQT  &ltl TP DQT  &hml LCTRL UNDER  &hml LSHFT MINUS  &ltl FN PLUS           &trans  &trans  &trans     &ltr FN EQUAL  &hmr RSHFT LBKT  &hmr RCTRL RBKT  &ltr TP LBRC  &ltr EX RBRC  &ltr VI BSLH
 //---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
 &trans        &kp F1      &kp F2      &kp F3            &kp F4           &kp F5        &trans          &trans             &kp F6         &kp F7           &kp F8           &kp F9       &kp F10      &trans
 //---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
