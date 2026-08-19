@@ -29,7 +29,7 @@ layers:
   - {t: L, h: SYMBOL}
   - {t: ;, h: EXTEND, s: ':'}
   - {t: '$$mdi:keyboard-return$$', h: VISUAL}
-  - F23
+  - {t: PAUSE BREAK, h: '$$mdi:printer-outline$$'}
   - Z
   - X
   - C
@@ -42,13 +42,13 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - F24
-  - F21
+  - PSCRN PAUSE BREAK
+  - APP
   - {t: INS, h: LGUI}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: INS, h: RGUI}
-  - F22
+  - APP
   COMP:
   - $$mdi:backspace-reverse-outline$$
   - Q
@@ -393,9 +393,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: DEFAULT, h: toggle}
 combos:
-- p: [44, 45]
-  k: PAUSE BREAK
-  l: [DEFAULT]
 - p: [43, 46]
   k: $$mdi:alpha-w-box$$
   l: [DEFAULT]
