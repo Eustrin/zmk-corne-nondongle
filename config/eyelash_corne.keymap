@@ -82,10 +82,10 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <500>;
-            /* hold-trigger-on-release; // Could triggle in one hand past time */
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>; // Right keys
-            hold-while-undecided; // Immediately hold for mouse
+            /* hold-trigger-on-release; // Could triggle in one hand past time */
+            /* hold-while-undecided; // Immediately hold for mouse */
         };
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
@@ -94,7 +94,6 @@
             tapping-term-ms = <500>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>; // Left keys
-            hold-while-undecided;
         };
 
         ltl: layer_tap_left {
@@ -104,7 +103,6 @@
             tapping-term-ms = <500>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>;
-            hold-while-undecided;
         };
         ltr: layer_tap_right {
             compatible = "zmk,behavior-hold-tap";
@@ -113,7 +111,6 @@
             tapping-term-ms = <500>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>;
-            hold-while-undecided;
         };
     };
 
@@ -221,30 +218,30 @@
         tp_layer {
             display-name = "TOP";
             bindings = <
-//---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
-&kp TILDE     &kp EXCL    &kp AT      &kp HASH          &kp DLLR         &kp PRCNT                     &trans             &kp CARET      &kp AMPS         &kp ASTRK        &kp LPAR     &kp RPAR     &kp PIPE
-//---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
-&ltl VI GRAVE  &ltl EX SQT  &ltl TP DQT  &hml LCTRL UNDER  &hml LSHFT MINUS  &ltl FN PLUS           &trans  &trans  &trans     &ltr FN EQUAL  &hmr RSHFT LBKT  &hmr RCTRL RBKT  &ltr TP LBRC  &ltr EX RBRC  &ltr VI BSLH
-//---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
-&trans        &kp F1      &kp F2      &kp F3            &kp F4           &kp F5        &trans          &trans             &kp F6         &kp F7           &kp F8           &kp F9       &kp F10      &trans
-//---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
-                          &trans      &trans            &trans                                                            &trans         &trans           &trans
-//---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
+//---------    +----------  +----------  +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------   +----------   +----------|
+&kp TILDE      &kp EXCL     &kp AT       &kp HASH          &kp DLLR          &kp PRCNT                     &trans             &kp CARET      &kp AMPS         &kp ASTRK        &kp LPAR      &kp RPAR      &kp PIPE
+//---------    +----------  +----------  +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------   +----------   +----------|
+&ltl VI GRAVE  &ltl EX SQT  &ltl TP DQT  &hml LCTRL UNDER  &hml LSHFT MINUS  &ltl FN PLUS          &trans  &trans  &trans     &ltr FN EQUAL  &hmr RSHFT LBKT  &hmr RCTRL RBKT  &ltr TP LBRC  &ltr EX RBRC  &ltr VI BSLH
+//---------    +----------  +----------  +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------   +----------   +----------|
+&trans         &kp N1       &kp N2       &kp N3            &kp N4            &kp N5        &trans          &trans             &kp N6         &kp N7           &kp N8           &kp N9        &kp N0        &trans
+//---------    +----------  +----------  +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------   +----------   +----------|
+                            &trans       &trans            &trans                                                             &trans         &trans           &trans
+//---------    +----------  +----------  +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------   +----------   +----------|
             >;
         };
 
         ex_layer {
             display-name = "EXTEND";
             bindings = <
-//---------+----------   +----------+----------    +----------   +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
-&kp DEL    &kp KP_MINUS  &kp N9     &kp N8         &kp N7        &kp KP_DIVIDE                    &trans             &none      &none            &none          &none      &kp PG_UP    &kp BSPC
-//---------+----------   +----------+----------    +----------   +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
-&kp ESC    &kp N0        &kp N6     &hml LCTRL N5  &hml LSHFT N4  &kp KP_DOT               &trans  &trans  &trans     &kp LEFT  &hmr RSHFT DOWN  &hmr RCTRL UP  &kp RIGHT  &key_repeat  &kp RET
-//---------+----------   +----------+----------    +----------   +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
-&trans     &kp KP_PLUS   &kp N3     &kp N2         &kp N1        &kp KP_MULTIPLY  &trans          &trans             &kp PG_DN  &none            &kp HOME       &kp END    &none        &trans
-//---------+----------   +----------+----------    +----------   +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
-                                    &trans         &trans        &trans                                                         &trans           &trans         &trans
-//---------+----------   +----------+----------    +----------   +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
+//---------+----------   +----------+----------    +----------    +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
+&kp DEL    &kp KP_MINUS  &kp N9     &kp N8         &kp N7         &kp KP_DIVIDE                    &trans             &none      &none            &none          &none      &kp PG_UP    &kp BSPC
+//---------+----------   +----------+----------    +----------    +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
+&kp ESC    &kp N0        &kp N6     &hml LCTRL N5  &hml LSHFT N4  &kp KP_DOT               &trans  &trans  &trans     &kp LEFT   &hmr RSHFT DOWN  &hmr RCTRL UP  &kp RIGHT  &key_repeat  &kp RET
+//---------+----------   +----------+----------    +----------    +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
+&trans     &kp KP_PLUS   &kp N3     &kp N2         &kp N1         &kp KP_MULTIPLY  &trans          &trans             &kp PG_DN  &none            &kp HOME       &kp END    &none        &trans
+//---------+----------   +----------+----------    +----------    +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
+                                    &trans         &trans         &trans                                                         &trans           &trans         &trans
+//---------+----------   +----------+----------    +----------    +----------|     |-------|-------|-------|-------|  |----------+----------      +----------    +----------+----------  +----------|
             >;
         };
 
@@ -295,10 +292,10 @@
 
         sys_layer {
             display-name = "SYSTEM";
-            bindings = < // rgb_ug: RGB Underglow; EFF: Effect forward; EFR: Effect reverse; EP: External Power
+            bindings = < // rgb_ug: RGB Underglow; EFF: Effect forward; EFR: Effect reverse; EP: External Power // BUG: &out make error
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
 /* &bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &out OUT_BL    &out OUT_USB   &out OUT_NONE                  &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader */
-&bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &none          &none          &none                          &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader
+&bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &none          &none          &none                          &trans             &studio_unlock   &none              &none             &none            &rgb_ug RGB_SPI  &bootloader
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
 &sys_reset   &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4           &trans  &trans  &trans     &rgb_ug RGB_EFR  &rgb_ug RGB_BRD    &rgb_ug RGB_BRI   &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &sys_reset
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
@@ -306,7 +303,7 @@
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
                                             &to DF         &none          &none                                             &none            &none              &to DF
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
-            >;
+            >; // &ext_power EP_OFF  &ext_power EP_ON &out OUT_BL OUT_USB OUT_NONE
         };
 
 /*         xxxxxx_layer { */
