@@ -16,7 +16,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-esc$$', h: VISUAL}
   - {t: A, h: EXTEND}
-  - {t: S, h: SYMBOL}
+  - {t: S, h: TOP}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: G, h: FUNC}
@@ -26,10 +26,10 @@ layers:
   - {t: H, h: FUNC}
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: SYMBOL}
+  - {t: L, h: TOP}
   - {t: ;, h: EXTEND, s: ':'}
   - {t: '$$mdi:keyboard-return$$', h: VISUAL}
-  - {t: PAUSE BREAK, h: '$$mdi:printer-outline$$'}
+  - {t: PAUSE BREAK, h: F22}
   - Z
   - X
   - C
@@ -42,13 +42,13 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: PAUSE BREAK, h: '$$mdi:printer-outline$$'}
-  - APP
+  - {t: PAUSE BREAK, h: F24}
+  - F21
   - {t: INS, h: LGUI}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: INS, h: RGUI}
-  - APP
+  - F23
   COMP:
   - $$mdi:backspace-reverse-outline$$
   - Q
@@ -96,9 +96,9 @@ layers:
   - EXTEND
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
-  - SYMBOL
+  - TOP
   - RGUI
-  SYMBOL:
+  TOP:
   - '~'
   - '!'
   - '@'
@@ -114,7 +114,7 @@ layers:
   - '|'
   - {t: '`', h: VISUAL, s: '~'}
   - {t: '''', h: EXTEND, s: '"'}
-  - {t: '"', h: SYMBOL, type: held}
+  - {t: '"', h: TOP, type: held}
   - {t: _, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '-', h: '$$mdi:apple-keyboard-shift$$', s: _}
   - {t: +, h: FUNC}
@@ -124,7 +124,7 @@ layers:
   - {t: '=', h: FUNC, s: +}
   - {t: '[', h: '$$mdi:apple-keyboard-shift$$', s: '{'}
   - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
-  - {t: '{', h: SYMBOL, type: held alternate}
+  - {t: '{', h: TOP, type: held alternate}
   - {t: '}', h: EXTEND}
   - {t: \, h: VISUAL, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -206,7 +206,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-right$$
   - $$mdi:pan-up$$
   - {t: '$$mdi:backspace$$', type: backspace}
