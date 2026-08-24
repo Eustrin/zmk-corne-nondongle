@@ -29,7 +29,7 @@ layers:
   - {t: L, h: TOP}
   - {t: ;, h: EXTEND, s: ':'}
   - {t: '$$mdi:keyboard-return$$', h: VISUAL}
-  - {t: PAUSE BREAK, h: F22}
+  - {t: LANG1, h: F22}
   - Z
   - X
   - C
@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: PAUSE BREAK, h: F24}
+  - {t: LANG2, h: F24}
   - F21
   - {t: INS, h: LGUI}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
@@ -303,9 +303,9 @@ layers:
   - $$mdi:printer-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - KP DIVIDE
-  - KP 9
-  - KP 8
   - KP 7
+  - KP 8
+  - KP 9
   - KP MINUS
   - KP EQUAL
   - $$mdi:apple-keyboard-caps$$
@@ -318,9 +318,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - KP LPAR
-  - KP 6
-  - KP 5
   - KP 4
+  - KP 5
+  - KP 6
   - KP ENTER
   - KP RPAR
   - SLCK
