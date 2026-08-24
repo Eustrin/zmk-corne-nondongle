@@ -25,10 +25,10 @@
 #define SYS  7 // SYSTEM
 
 #define LANG PAUSE_BREAK
-#define LHYPR K_APP
-#define RHYPR K_APP
-#define LULT PSCRN
-#define RULT PSCRN
+#define LHYPR F21
+#define LULT F22
+#define RHYPR F23
+#define RULT F24
 
 // LAYOUT:
 // +---+---+---+---+---+---+           +---+       +---+---+---+---+---+---+
@@ -81,8 +81,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            hold-trigger-on-release; // Could triggle in one hand past time
+            tapping-term-ms = <500>;
+            /* hold-trigger-on-release; // Could triggle in one hand past time */
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>; // Right keys
             hold-while-undecided; // Immediately hold for mouse
@@ -91,8 +91,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            hold-trigger-on-release; // Could triggle in one hand past time
+            tapping-term-ms = <500>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>; // Left keys
             hold-while-undecided;
@@ -102,8 +101,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            hold-trigger-on-release;
+            tapping-term-ms = <500>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>;
             hold-while-undecided;
@@ -112,8 +110,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            hold-trigger-on-release;
+            tapping-term-ms = <500>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>;
             hold-while-undecided;
@@ -222,7 +219,7 @@
         };
 
         tp_layer {
-            display-name = "SYMBOL";
+            display-name = "TOP";
             bindings = <
 //---------   +---------- +---------- +----------       +----------      +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------  +----------  +----------|
 &kp TILDE     &kp EXCL    &kp AT      &kp HASH          &kp DLLR         &kp PRCNT                     &trans             &kp CARET      &kp AMPS         &kp ASTRK        &kp LPAR     &kp RPAR     &kp PIPE
@@ -255,7 +252,7 @@
             display-name = "VISUAL";
             bindings = < // mmv: Mouse Move; mkp: Mouse Key Press; msc: Mouse Scroll
 //---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
-&kp DEL    &none      &kp C_MUTE     &kp C_VOL_UP  &kp C_VOL_DN  &none                          &trans             &none           &none           &none           &msc SCRL_RIGHT  &msc SCRL_UP    &kp BSPC
+&kp DEL    &none      &kp C_MUTE     &kp C_VOL_UP  &kp C_VOL_DN  &none                          &trans             &none           &none           &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &kp BSPC
 //---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
 &kp ESC    &kp LGUI   &kp LALT       &kp LCTRL     &kp LSHFT     &kp LGUI               &trans  &trans  &trans     &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &kp RET
 //---------+----------+----------    +----------   +----------   +----------|   |-------|-------|-------|-------|  |----------     +----------     +----------     +----------      +----------     +----------|
