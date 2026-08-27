@@ -7,10 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-
 #include <dt-bindings/zmk/bt.h> // &bt
 #include <dt-bindings/zmk/outputs.h> // &out
-
 #include <dt-bindings/zmk/rgb.h> // rgb_ug
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/ext_power.h> // &ext_power
@@ -25,7 +23,7 @@
 #define MISC 6 // MISC & MISCELLANEOUS
 #define SYS  7 // SYSTEM
 
-#define LANG PAUSE_BREAK
+// #define LANG PAUSE_BREAK
 #define LLANG LANG1
 #define RLANG LANG2
 #define LHYPR F21
@@ -234,7 +232,7 @@
 //---------    +----------     +----------     +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------      +----------     +----------|
 &kp TILDE      &kp EXCL        &kp AT          &kp HASH          &kp DLLR          &kp PRCNT                     &trans             &kp CARET      &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR        &kp PIPE
 //---------    +----------     +----------     +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------      +----------     +----------|
-&kp GRAVE      &hml LHYPR SQT  &hml LSUPR DQT  &hml LCTRL UNDER  &hml LMETA MINUS  &ltl VI PLUS          &trans  &trans  &trans     &ltr VI EQUAL  &hmr RMETA LBKT  &hmr RCTRL RBKT  &hmr RSUPR LBRC  &hmr HYPR RBRC  &kp BSLH
+&kp GRAVE      &hml LHYPR SQT  &hml LSUPR DQT  &hml LCTRL UNDER  &hml LMETA MINUS  &ltl VI PLUS          &trans  &trans  &trans     &ltr VI EQUAL  &hmr RMETA LBKT  &hmr RCTRL RBKT  &hmr RSUPR LBRC  &hmr RHYPR RBRC  &kp BSLH
 //---------    +----------     +----------     +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------      +----------     +----------|
 &trans         &kp N1          &kp N2          &kp N3            &kp N4            &kp N5        &trans          &trans             &kp N6         &kp N7           &kp N8           &kp N9           &kp N0          &trans
 //---------    +----------     +----------     +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------      +----------     +----------|
