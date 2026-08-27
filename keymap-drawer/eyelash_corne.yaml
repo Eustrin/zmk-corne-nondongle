@@ -125,7 +125,7 @@ layers:
   - {t: '[', h: '$$mdi:apple-keyboard-option$$', s: '{'}
   - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
   - {t: '{', h: LGUI}
-  - {t: '}', h: HYPR}
+  - {t: '}', h: F23}
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
