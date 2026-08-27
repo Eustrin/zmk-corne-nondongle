@@ -27,7 +27,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: LGUI}
-  - '&hmr F23'
+  - {t: ;, h: F23, s: ':'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: LANG1, h: F22}
   - Z
@@ -113,8 +113,8 @@ layers:
   - )
   - '|'
   - {t: '`', s: '~'}
-  - {t: '''', h: HYPR, s: '"'}
-  - {t: '"', h: SUPR}
+  - {t: '''', h: F21, s: '"'}
+  - {t: '"', h: LGUI}
   - {t: _, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
   - {t: +, h: VISUAL}
@@ -211,21 +211,21 @@ layers:
   - $$mdi:pan-up$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-esc$$
-  - F21
   - LGUI
-  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: VISUAL, h: toggle, type: held}
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
+  - {t: LGUI, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: VISUAL, h: toggle, type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: VISUAL, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BRI MAX
   - $$mdi:brightness-5$$
@@ -238,12 +238,12 @@ layers:
   - $$mdi:pan-left$$
   - $$mdi:pan-right$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB4'
+  - {t: VISUAL, h: toggle}
+  - {t: DEFAULT, h: toggle}
   - '&mkp MB3'
   - {t: '&mkp MB1', type: held alternate}
   - {t: '&mkp MB2', type: held alternate}
-  - {t: '$$mdi:apple-keyboard-shift$$', type: held alternate}
+  - {t: '&mkp MB4', type: held alternate}
   - '&mkp MB5'
   FUNC:
   - {t: SYSTEM, h: toggle}
