@@ -310,20 +310,20 @@
             >; // &ext_power EP_OFF  &ext_power EP_ON &out OUT_BL OUT_USB OUT_NONE
         };
 
-/*         xxxxxx_layer { */
-/*             display-name = "XXXXXX"; */
-/*             bindings = < */
+/*         xxxxxx_layer {                                                                                                                                                      */
+/*             display-name = "XXXXXX";                                                                                                                                        */
+/*             bindings = <                                                                                                                                                    */
 /* //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------| */
-/* &none      &none      &none      &none      &none      &none                         &trans             &none      &none      &none      &none      &none      &none */
+/* &none      &none      &none      &none      &none      &none                         &trans             &none      &none      &none      &none      &none      &none        */
 /* //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------| */
-/* &none      &none      &none      &none      &none      &none                 &trans  &trans  &trans     &none      &none      &none      &none      &none      &none */
+/* &none      &none      &none      &none      &none      &none                 &trans  &trans  &trans     &none      &none      &none      &none      &none      &none        */
 /* //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------| */
-/* &none      &none      &none      &none      &none      &none         &trans          &trans             &none      &none      &none      &none      &none      &none */
+/* &none      &none      &none      &none      &none      &none         &trans          &trans             &none      &none      &none      &none      &none      &none        */
 /* //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------| */
-/*                                  &trans     &trans     &trans                                                      &trans     &trans     &trans */
+/*                                  &trans     &trans     &trans                                           &trans     &trans     &trans                                        */
 /* //---------+----------+----------+----------+----------+----------|  |-------|-------|-------|-------|  |----------+----------+----------+----------+----------+----------| */
-/*             >; */
-/*         }; */
+/*             >;                                                                                                                                                              */
+/*         };                                                                                                                                                                  */
 
     };
 };
