@@ -33,6 +33,8 @@
 #define RHYPR F23
 #define RULT F24
 
+#undef LMETA
+#undef RMETA
 #define LMETA LALT
 #define RMETA RALT
 #define LSUPR LGUI
@@ -232,7 +234,7 @@
 //---------    +----------     +----------     +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------      +----------     +----------|
 &kp TILDE      &kp EXCL        &kp AT          &kp HASH          &kp DLLR          &kp PRCNT                     &trans             &kp CARET      &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR        &kp PIPE
 //---------    +----------     +----------     +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------      +----------     +----------|
-&kp GRAVE      &hml HYPR SQT   &hml SUPR DQT   &hml LCTRL UNDER  &hml LMETA MINUS  &ltl VI PLUS          &trans  &trans  &trans     &ltr VI EQUAL  &hmr RMETA LBKT  &hmr RCTRL RBKT  &hmr RSUPR LBRC  &hmr HYPR RBRC  rltr VI BSLH
+&kp GRAVE      &hml LHYPR SQT  &hml LSUPR DQT  &hml LCTRL UNDER  &hml LMETA MINUS  &ltl VI PLUS          &trans  &trans  &trans     &ltr VI EQUAL  &hmr RMETA LBKT  &hmr RCTRL RBKT  &hmr RSUPR LBRC  &hmr HYPR RBRC  &kp BSLH
 //---------    +----------     +----------     +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------      +----------     +----------|
 &trans         &kp N1          &kp N2          &kp N3            &kp N4            &kp N5        &trans          &trans             &kp N6         &kp N7           &kp N8           &kp N9           &kp N0          &trans
 //---------    +----------     +----------     +----------       +----------       +----------|  |-------|-------|-------|-------|  |----------    +----------      +----------      +----------      +----------     +----------|
