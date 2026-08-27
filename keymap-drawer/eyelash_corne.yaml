@@ -14,21 +14,21 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-esc$$', h: VISUAL}
-  - {t: A, h: EXTEND}
-  - {t: S, h: TOP}
+  - $$mdi:keyboard-esc$$
+  - {t: A, h: F21}
+  - {t: S, h: LGUI}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: G, h: FUNC}
+  - {t: F, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: G, h: VISUAL}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: H, h: FUNC}
-  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: H, h: VISUAL}
+  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: TOP}
-  - {t: ;, h: EXTEND, s: ':'}
-  - {t: '$$mdi:keyboard-return$$', h: VISUAL}
+  - {t: L, h: LGUI}
+  - '&hmr F23'
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: LANG1, h: F22}
   - Z
   - X
@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: LANG2, h: F24}
-  - F21
-  - {t: INS, h: LGUI}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: INS, h: RGUI}
-  - F23
+  - EXTEND
+  - {t: INS, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: TOP}
+  - {t: '$$mdi:keyboard-space$$', h: TOP}
+  - {t: INS, h: '$$mdi:apple-keyboard-shift$$'}
+  - EXTEND
   COMP:
   - $$mdi:backspace-reverse-outline$$
   - Q
@@ -112,21 +112,21 @@ layers:
   - (
   - )
   - '|'
-  - {t: '`', h: VISUAL, s: '~'}
-  - {t: '''', h: EXTEND, s: '"'}
-  - {t: '"', h: TOP, type: held}
+  - {t: '`', s: '~'}
+  - {t: '''', h: HYPR, s: '"'}
+  - {t: '"', h: SUPR}
   - {t: _, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '-', h: '$$mdi:apple-keyboard-shift$$', s: _}
-  - {t: +, h: FUNC}
+  - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
+  - {t: +, h: VISUAL}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '=', h: FUNC, s: +}
-  - {t: '[', h: '$$mdi:apple-keyboard-shift$$', s: '{'}
+  - {t: '=', h: VISUAL, s: +}
+  - {t: '[', h: '$$mdi:apple-keyboard-option$$', s: '{'}
   - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
-  - {t: '{', h: TOP, type: held alternate}
-  - {t: '}', h: EXTEND}
-  - {t: \, h: VISUAL, s: '|'}
+  - {t: '{', h: LGUI}
+  - {t: '}', h: HYPR}
+  - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -143,8 +143,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: FUNC, type: held}
+  - {t: FUNC, type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   EXTEND:
@@ -162,8 +162,8 @@ layers:
   - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-esc$$
-  - {t: '0', s: ), type: held}
-  - {t: '6', s: ^, type: held alternate}
+  - {t: '0', s: )}
+  - {t: '6', s: ^}
   - {t: '5', h: '$$mdi:apple-keyboard-control$$', s: '%'}
   - {t: '4', h: '$$mdi:apple-keyboard-shift$$', s: $}
   - KP DOT
@@ -173,8 +173,8 @@ layers:
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:arrow-right-bold$$', type: held alternate}
-  - {t: '&key_repeat', type: held alternate}
+  - $$mdi:arrow-right-bold$$
+  - '&key_repeat'
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - KP PLUS
@@ -190,12 +190,12 @@ layers:
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   VISUAL:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -210,22 +210,22 @@ layers:
   - $$mdi:pan-right$$
   - $$mdi:pan-up$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-esc$$', type: held}
+  - $$mdi:keyboard-esc$$
+  - F21
   - LGUI
-  - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
-  - LGUI
+  - $$mdi:apple-keyboard-option$$
+  - {t: VISUAL, h: toggle, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: VISUAL, h: toggle, type: held alternate}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$', type: held alternate}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-return$$', type: held alternate}
-  - {t: VISUAL, h: toggle}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BRI MAX
   - $$mdi:brightness-5$$
@@ -238,12 +238,12 @@ layers:
   - $$mdi:pan-left$$
   - $$mdi:pan-right$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: VISUAL, h: toggle}
-  - {t: DEFAULT, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB4'
   - '&mkp MB3'
-  - '&mkp MB1'
-  - '&mkp MB2'
-  - {t: '&mkp MB4', type: held alternate}
+  - {t: '&mkp MB1', type: held alternate}
+  - {t: '&mkp MB2', type: held alternate}
+  - {t: '$$mdi:apple-keyboard-shift$$', type: held alternate}
   - '&mkp MB5'
   FUNC:
   - {t: SYSTEM, h: toggle}
@@ -261,17 +261,17 @@ layers:
   - {t: SYSTEM, h: toggle}
   - {t: COMP, h: toggle}
   - F1
-  - {t: F2, type: held alternate}
+  - F2
   - F3
   - F4
-  - {t: F5, type: held}
+  - F5
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: F6, type: held alternate}
+  - F6
   - F7
   - F8
-  - {t: F9, type: held alternate}
+  - F9
   - F10
   - {t: COMP, h: toggle}
   - {t: MISC, h: toggle}
@@ -290,9 +290,9 @@ layers:
   - {t: MISC, h: toggle}
   - {t: DEFAULT, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: DEFAULT, h: toggle}
   MISC:
   - KP NLCK
