@@ -43,14 +43,14 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: LANG2, h: F24}
-  - EXT  END
+  - EXTEND
   - {t: INS, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-tab$$', h: TOP}
   - {t: '$$mdi:keyboard-space$$', h: TOP}
   - {t: INS, h: '$$mdi:apple-keyboard-shift$$'}
-  - EXT  END
+  - EXTEND
   COMP:
-  - '&hml DEL'
+  - $$mdi:backspace-reverse-outline$$
   - Q
   - W
   - E
@@ -93,7 +93,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
-  - EXT  END
+  - EXTEND
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
   - TOP
@@ -147,7 +147,7 @@ layers:
   - {t: FUNC, type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  EXT  END:
+  EXTEND:
   - $$mdi:backspace-reverse-outline$$
   - KP MINUS
   - {t: '9', s: (}
