@@ -124,15 +124,15 @@
             hold-trigger-on-release; // Could triggle in one hand past time
         };
 
-        hmr_repeat: mod_tap_repeat {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&key_repeat>;
-            tapping-term-ms = <300>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>;
-            hold-trigger-on-release;
-        };
+        /* hmr_repeat: mod_tap_repeat { */
+        /*     compatible = "zmk,behavior-hold-tap"; */
+        /*     #binding-cells = <2>; */
+        /*     flavor = "hold-preferred"; */
+        /*     bindings = <&kp>, <&key_repeat>; */
+        /*     tapping-term-ms = <300>; */
+        /*     hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>; */
+        /*     hold-trigger-on-release; */
+        /* }; */
 
     };
 
@@ -258,7 +258,7 @@
 //---------+----------    +----------    +----------    +----------    +----------|     |-------|-------|-------|-------|  |----------   +----------      +----------    +----------       +----------          +----------|
 &kp DEL    &kp KP_MINUS   &kp N9         &kp N8         &kp N7         &kp KP_DIVIDE                    &trans             &none         &none            &none          &none             &kp PG_UP            &kp BSPC
 //---------+----------    +----------    +----------    +----------    +----------|     |-------|-------|-------|-------|  |----------   +----------      +----------    +----------       +----------          +----------|
-&kp ESC    &hml LHYPR N7  &hml LSUPR N6  &hml LCTRL N5  &hml LMETA N4  &ltl VI KP_DOT           &trans  &trans  &trans     &ltl VI LEFT  &hmr RMETA DOWN  &hmr RCTRL UP  &hmr RSUPR RIGHT  &hmr_repeat RHYPR 0  &kp RET
+&kp ESC    &hml LHYPR N7  &hml LSUPR N6  &hml LCTRL N5  &hml LMETA N4  &ltl VI KP_DOT           &trans  &trans  &trans     &ltl VI LEFT  &hmr RMETA DOWN  &hmr RCTRL UP  &hmr RSUPR RIGHT  &key_repeat          &kp RET
 //---------+----------    +----------    +----------    +----------    +----------|     |-------|-------|-------|-------|  |----------   +----------      +----------    +----------       +----------          +----------|
 &trans     &kp KP_PLUS    &kp N3         &kp N2         &kp N1         &kp KP_MULTIPLY  &trans          &trans             &kp PG_DN     &none            &kp HOME       &kp END           &none                &trans
 //---------+----------    +----------    +----------    +----------    +----------|     |-------|-------|-------|-------|  |----------   +----------      +----------    +----------       +----------          +----------|
