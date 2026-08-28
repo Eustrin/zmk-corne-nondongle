@@ -50,7 +50,7 @@ layers:
   - {t: INS, h: '$$mdi:apple-keyboard-shift$$'}
   - EXTEND
   COMP:
-  - '&hm DEL'
+  - '&hml DEL'
   - Q
   - W
   - E
