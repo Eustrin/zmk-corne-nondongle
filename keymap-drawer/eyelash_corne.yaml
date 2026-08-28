@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: LANG2, h: F24}
-  - EXTEND
+  - EXT  END
   - {t: INS, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-tab$$', h: TOP}
   - {t: '$$mdi:keyboard-space$$', h: TOP}
   - {t: INS, h: '$$mdi:apple-keyboard-shift$$'}
-  - EXTEND
+  - EXT  END
   COMP:
   - '&hml DEL'
   - Q
@@ -93,7 +93,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
-  - EXTEND
+  - EXT  END
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
   - TOP
@@ -147,7 +147,7 @@ layers:
   - {t: FUNC, type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  EXTEND:
+  EXT  END:
   - $$mdi:backspace-reverse-outline$$
   - KP MINUS
   - {t: '9', s: (}
@@ -174,7 +174,7 @@ layers:
   - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:arrow-right-bold$$', h: LGUI}
-  - '&hmr_repeat F23'
+  - {t: '&key_repeat', h: F23}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - KP PLUS
