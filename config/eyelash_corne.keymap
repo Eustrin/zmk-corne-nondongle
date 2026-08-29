@@ -301,15 +301,15 @@
             display-name = "MISC";
             bindings = <
 //----------  +---------- +----------+----------+----------+----------|     |-------|-------|-------|-------|  |----------      +---------- +----------   +----------+----------   +----------|
-&kp KP_NLCK   &kp SYSREQ  &none      &none      &none      &kp PSCRN                        &trans             &kp KP_DIVIDE    &kp KP_N7   &kp KP_N8     &kp KP_N9  &kp KP_MINUS  &kp KP_EQUAL
+&kp KP_NLCK   &none       &none      &none      &none      &kp PSCRN                        &trans             &kp KP_DIVIDE    &kp KP_N7   &kp KP_N8     &kp KP_N9  &kp KP_MINUS  &kp KP_EQUAL
 //----------  +---------- +----------+----------+----------+----------|     |-------|-------|-------|-------|  |----------      +---------- +----------   +----------+----------   +----------|
-&kp CAPS      &kp LGUI    &kp LALT   &kp LCTRL  &kp LSHFT  &kp PAUSE_BREAK          &trans  &trans  &trans     &kp KP_LPAR      &kp KP_N4   &kp KP_N5     &kp KP_N6  &kp KP_ENTER  &kp KP_RPAR
+&kp CAPS      &kp LHYPR   &kp LSUPR  &kp LCTRL  &kp LMETA  &kp PAUSE_BREAK          &trans  &trans  &trans     &kp KP_LPAR      &kp KP_N4   &kp KP_N5     &kp KP_N6  &kp KP_ENTER  &kp KP_RPAR
 //----------  +---------- +----------+----------+----------+----------|     |-------|-------|-------|-------|  |----------      +---------- +----------   +----------+----------   +----------|
-&kp SLCK      &kp INS     &none      &none      &none      &kp K_APP        &trans          &trans             &kp KP_MULTIPLY  &kp KP_N1   &kp KP_N2     &kp KP_N3  &kp KP_PLUS   &kp KP_COMMA
+&kp SLCK      &none       &none      &none      &none      &kp K_APP        &trans          &trans             &kp KP_MULTIPLY  &kp KP_N1   &kp KP_N2     &kp KP_N3  &kp KP_PLUS   &kp KP_COMMA
 //----------  +---------- +----------+----------+----------+----------|     |-------|-------|-------|-------|  |----------      +---------- +----------   +----------+----------   +----------|
-                                     &to DF     &none      &none                                               &kp KP_N0        &kp KP_DOT  &to DF
+                                     &to DF     &kp LSHFT  &none                                               &kp KP_N0        &kp KP_DOT  &to DF
                                    //+----------+----------+----------|     |-------|-------|-------|-------|  |----------      +---------- +----------
-            >;
+            >; // kp SYSREQ
         };
 
         sys_layer {
@@ -317,7 +317,8 @@
             bindings = < // rgb_ug: RGB Underglow; EFF: Effect forward; EFR: Effect reverse; EP: External Power // BUG: &out make error
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
 /* &bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &out OUT_BL    &out OUT_USB   &out OUT_NONE                  &trans             &studio_unlock   &ext_power EP_OFF  &ext_power EP_ON  &none            &rgb_ug RGB_SPI  &bootloader */
-&bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &none          &none          &none                          &trans             &studio_unlock   &none              &none             &none            &rgb_ug RGB_SPI  &bootloader
+/* &bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &none          &none          &none                          &trans             &studio_unlock   &none              &none             &none            &rgb_ug RGB_SPI  &bootloader */
+&bootloader  &bt BT_CLR_ALL  &bt BT_CLR     &out OUT_NONE  &none          &none                          &trans             &studio_unlock   &none              &none             &none            &rgb_ug RGB_SPI  &bootloader
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
 &sys_reset   &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4           &trans  &trans  &trans     &rgb_ug RGB_EFR  &rgb_ug RGB_BRD    &rgb_ug RGB_BRI   &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &sys_reset
 //---------  +----------     +----------    +----------    +----------    +----------|   |-------|-------|-------|-------|  |----------      +----------        +----------       +----------      +----------      +----------|
