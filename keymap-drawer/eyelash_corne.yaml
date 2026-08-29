@@ -296,7 +296,7 @@ layers:
   - {t: DEFAULT, h: toggle}
   MISC:
   - KP NLCK
-  - SYSREQ
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -309,10 +309,10 @@ layers:
   - KP MINUS
   - KP EQUAL
   - $$mdi:apple-keyboard-caps$$
+  - F21
   - LGUI
-  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-option$$
   - PAUSE BREAK
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -324,7 +324,7 @@ layers:
   - KP ENTER
   - KP RPAR
   - SLCK
-  - INS
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -338,7 +338,7 @@ layers:
   - KP PLUS
   - KP COMMA
   - {t: DEFAULT, h: toggle}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP 0
   - KP DOT
@@ -347,7 +347,7 @@ layers:
   - $$mdi:progress-download$$
   - BT CLR ALL
   - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - OUT NONE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
